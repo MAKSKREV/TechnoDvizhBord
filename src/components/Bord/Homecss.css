@@ -16,6 +16,13 @@
 
 }
 
+.skyscraper_label {
+    font-family: Proxima Nova Condensed;
+    color: rgba(114, 114, 114, 0.804);
+    font-weight: 600;
+    text-align: center;
+}
+
 .title_left {
     display: flex;
     flex-direction: column;
@@ -159,8 +166,15 @@
 
 }
 
+.houses_containerbig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6px;
+}
+
 .houses_container {
-  display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 6px;
@@ -172,11 +186,11 @@
 }
 
 .house_white {
-    border-radius: 5px;
+    border-radius: 6px;
     background: #ffffff;
     flex-shrink: 0;
-    width: 30.241px;
-    height: 31.845px;
+    width: 55px;
+    height: 55px;
     /* width: 30.241px;
     height: 31.845px;
     border-radius: 5px;
@@ -191,8 +205,8 @@
     border-radius: 5px;
     background: #12B72D;
     flex-shrink: 0;
-    width: 30.241px;
-    height: 31.845px;
+    width: 55px;
+    height: 55px;
     /* border-radius: 5px;
     background: #12B72D;
     flex-shrink: 0; */
@@ -200,8 +214,8 @@
 }
 
 .streets_container {
-position: absolute;
-left: 0%;
+    position: absolute;
+    left: 0%;
 }
 
 .street_label_container {
@@ -212,12 +226,13 @@ left: 0%;
 }
 
 .street_label {
-    color: white;
+    color: rgba(114, 114, 114, 0.804);;
     font-family: Proxima Nova Condensed;
-    font-size: 10px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     line-height: normal;
+    text-align: center;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -307,11 +322,11 @@ left: 0%;
     left: 50%; */
     /* transform: translate(-50%); */
     width: 0;
-    border-radius: 5px;
+    border-radius: 7px;
     height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 30px solid rgb(255, 255, 255);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid rgb(255, 255, 255);
 
 
 }
@@ -321,7 +336,7 @@ left: 0%;
     width: 39.313px;
     height: 23.884px;
     flex-shrink: 0; */
-    /* border-radius: 5px;
+    /* border-radius: 7px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 30px solid #12B72D; */
@@ -331,10 +346,10 @@ left: 0%;
     /* transform: translate(-50%); */
     width: 0;
     height: 0;
-    border-radius: 5px;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 30px solid #12B72D;
+    border-radius: 7px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid #12B72D;
 
 }
 
@@ -475,7 +490,8 @@ left: 0%;
     left: 50%;
     transform: translate(-50%);
 }
-.item_for_widing{
+
+.item_for_widing {
     color: #fff;
     padding: 12px 0px;
     width: 530px;
@@ -489,10 +505,12 @@ left: 0%;
     text-align: center;
     flex-shrink: 0;
 }
-.w-300{
+
+.w-300 {
     box-sizing: border-box;
 }
-.table_row{
+
+.table_row {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -502,7 +520,8 @@ left: 0%;
     left: 50%;
     transform: translate(-50%);
 }
-.grid_for_team_names{
+
+.grid_for_team_names {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -511,6 +530,7 @@ left: 0%;
     left: 50%;
     transform: translate(-50%);
 }
+
 .area {
     background: #1219a1;
     position: absolute;
@@ -518,15 +538,15 @@ left: 0%;
     width: 100%;
     top: 0;
     left: 0;
-    height: 60%;
+    height: 100%;
 }
 
-.circles{
+.circles {
     position: absolute;
     top: 2%;
     left: 0;
     width: 96%;
-    height: 96%;
+    height: 96.5%;
     overflow: hidden;
 }
 
@@ -534,16 +554,20 @@ left: 0%;
     position: absolute;
     display: block;
     list-style: none;
-    width: 100px; /* Ширина изображения шестерёнки */
-    height: 100px; /* Высота изображения шестерёнки */
-    background-image: url('imggg.png'); /*  путь к картинки для анимации */
-    background-size: cover; /* Растягиваем изображение на всю площадь элемента */
+    width: 100px;
+    /* Ширина изображения шестерёнки */
+    height: 100px;
+    /* Высота изображения шестерёнки */
+    background-image: url('imggg.png');
+    /*  путь к картинки для анимации */
+    background-size: cover;
+    /* Растягиваем изображение на всю площадь элемента */
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
 
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
     left: 25%;
     width: 110px;
     height: 110px;
@@ -551,7 +575,7 @@ left: 0%;
 }
 
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
     left: 10%;
     width: 110px;
     height: 110px;
@@ -559,43 +583,43 @@ left: 0%;
     animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
     left: 70%;
     width: 110px;
     height: 110px;
     animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
     left: 5%;
     width: 110px;
-    height:110px;
+    height: 110px;
     animation-delay: 0s;
     animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
     left: 65%;
     width: 110px;
     height: 110px;
     animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
     left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
     left: 50%;
     width: 110px;
     height: 110px;
@@ -603,7 +627,7 @@ left: 0%;
     animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
     left: 6%;
     width: 110px;
     height: 110px;
@@ -611,7 +635,7 @@ left: 0%;
     animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
     left: 90%;
     width: 150px;
     height: 150px;
@@ -623,33 +647,38 @@ left: 0%;
 
 @keyframes animate {
 
-    0%{
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
     }
 
 }
+
 .water_animation_container {
     position: relative;
     width: 100%;
     height: 0;
     overflow: hidden;
-  }
-  
-  .water_animation_container .house_green {
+}
+
+.water_animation_container .house_green {
     width: 100%;
-    height: 25%; /* начальная высота, когда кубик пустой */
-    background-color: green; /* цвет воды */
-    transition: height 1s; /* добавляем плавное изменение высоты */
-  }
-  .loader {
+    height: 25%;
+    /* начальная высота, когда кубик пустой */
+    background-color: green;
+    /* цвет воды */
+    transition: height 1s;
+    /* добавляем плавное изменение высоты */
+}
+
+.loader {
     width: 455px;
     margin: 0 auto 70px;
     border: 2px;
@@ -696,6 +725,7 @@ left: 0%;
         top: 30px;
     }
 }
-.ulmedia{
+
+.ulmedia {
     position: absolute;
 }

@@ -1,8 +1,10 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase";
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [copyPassword, setCopyPassword] = useState("");
@@ -20,6 +22,7 @@ const SignUp = () => {
         setEmail("");
         setCopyPassword("");
         setPassword("");
+        navigate("/home");
 
 
       })

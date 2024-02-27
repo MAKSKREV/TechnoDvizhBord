@@ -17,29 +17,29 @@ const App = () => {
     });
     const StreetContainer = ({ label, score }) => (
         <div className="houses_container">
-          <div className={score === 4 ? 'triangle_green' : 'triangle'}></div>
-          {[...Array(4 - score)].map((_, index) => (
-            <div key={index} className="house_white"></div>
-          ))}
-          {[...Array(score)].map((_, index) => (
-            <div key={index} className="house_green"></div>
-          ))}
-          <div className="street_label">{label}</div>
+            <div className={score === 4 ? 'triangle_green' : 'triangle'}></div>
+            {[...Array(4 - score)].map((_, index) => (
+                <div key={index} className="house_white"></div>
+            ))}
+            {[...Array(score)].map((_, index) => (
+                <div key={index} className="house_green"></div>
+            ))}
+            <div className="street_label">{label}</div>
         </div>
-      );
-      
-      const Skyscraper = ({ score }) => (
+    );
+
+    const Skyscraper = ({ score }) => (
         <div className="houses_containerbig">
-          <div className={score === 4 ? 'big_triangle_green' : 'big_triangle'}></div>
-          {[...Array(4 - score)].map((_, index) => (
-            <div key={index} className="big_house_white"></div>
-          ))}
-          {[...Array(score)].map((_, index) => (
-            <div key={index} className="big_house_green"></div>
-          ))}
-          <div className="skyscraper_label">НЕБОСКРЕБ</div>
+            <div className={score === 4 ? 'big_triangle_green' : 'big_triangle'}></div>
+            {[...Array(4 - score)].map((_, index) => (
+                <div key={index} className="big_house_white"></div>
+            ))}
+            {[...Array(score)].map((_, index) => (
+                <div key={index} className="big_house_green"></div>
+            ))}
+            <div className="skyscraper_label">НЕБОСКРЕБ</div>
         </div>
-      );
+    );
     const fetchData = async () => {
         try {
             const response = await fetch("http://193.164.149.85:5000/scores");
@@ -59,6 +59,7 @@ const App = () => {
         };
     }, []);
     return (
+
         <div className="app">
             <div className="area">
                 <ul className="circles">
@@ -74,6 +75,7 @@ const App = () => {
                     <li></li>
                 </ul>
             </div>
+            <div className="main_background"></div>
             <div className="backroudn_for_titles"></div>
             <div className="title_left" style={{ position: 'absolute', top: '1.6%', left: '2%' }}>Робототехнический турнир “ТЕХНОДВИЖ” 2023/2024</div>
             <div className="separator" style={{ position: 'absolute', top: '.5%', left: '36.5%' }}></div>
@@ -82,7 +84,7 @@ const App = () => {
             <div className="title_right" style={{ position: 'absolute', top: '1.6%', left: '74%' }}>Квалификационный матч 1</div>
             <div className="logo_left"></div>
             <div className="logo_right"></div>
-            <div className="main_background"></div>
+
             <div className="blue_upper_background_with_curve"></div>
             <div className="score_background"></div>
             <div className="blue_upper_background"></div>
@@ -101,25 +103,32 @@ const App = () => {
                     <h1 id="timer" style={{ fontWeight: 'bold', fontSize: 'larger', zIndex: '11', position: 'absolute', left: '50%', transform: 'translate(-50%)' }}>02:00</h1>
                 </div>
             </div>
-            <div className="streets_container" style={{ position: 'absolute', top: '53%', left: '17%' }}>
-                {/* Ваши JSX-элементы для streets_container */}
+            <div className="streets_container" style={{ position: 'absolute', top: '45%', left: '14%' }}>
+                <StreetContainer score={data.team_1_score_street_1}/>
+                <div className='street_label'>Улица Медиа</div>
             </div>
-            <div className="streets_container" style={{ position: 'absolute', top: '53%', left: '71%' }}>
-                {/* Ваши JSX-элементы для streets_container */}
+            <div className="streets_container" style={{ position: 'absolute', top: '45%', left: '23.5%' }}>
+                <StreetContainer score={data.team_1_score_street_2}/>
+                <div className='street_label'>Улица Первых</div>
+            </div>
+            <div className="streets_container" style={{ position: 'absolute', top: '45%', left: '34%' }}>
+                <StreetContainer score={data.team_1_score_street_3}/>
+                <div className='street_label'>Улица Истории</div>
+            </div>
+            <div className='streets_container' style={{position:'absolute', top:'45%', left:'61%'}}>
+                <StreetContainer score={data.team_2_score_street_1}/>
+                <div className='street_label'>Улица Медиа</div>
+            </div>
+            <div className='streets_container' style={{position:'absolute', top:'45%', left:'71%'}}>
+                <StreetContainer score={data.team_2_score_street_2}/>
+                <div className='street_label'>Улица Первых</div>
+            </div>
+            <div className='streets_container' style={{position:'absolute', top:'45%', left:'81%'}}>
+                <StreetContainer score={data.team_2_score_street_3}/>
+                <div className='street_label'>Улица Истории</div>
             </div>
             <div className="streets_container" style={{ position: 'absolute', top: '43%', left: '50%', transform: 'translate(-50%)' }}>
-                {/* Ваши JSX-элементы для streets_container и skyscraper */}
-            </div>
-            <StreetContainer label="ул.Медиа" score={data.team_1_score_street_1} />
-            <StreetContainer label="ул.Первых" score={data.team_1_score_street_2} />
-            <StreetContainer label="ул.Истории" score={data.team_1_score_street_3} />
-
-            <StreetContainer label="ул.Медиа" score={data.team_2_score_street_1} />
-            <StreetContainer label="ул.Первых" score={data.team_2_score_street_2} />
-            <StreetContainer label="ул.Истории" score={data.team_2_score_street_3} />
-
-            <div className="streets_container" style={{ position: 'absolute', top: '43%', left: '50%', transform: 'translate(-50%)' }}>
-            <Skyscraper score={data.team_score_street_main} />
+                <Skyscraper score={data.team_score_street_main} />
             </div>
         </div>
     );

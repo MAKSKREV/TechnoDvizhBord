@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/auth/SignUp";
 import SignIn from "./components/auth/SignIn";
 import AuthDetails from "./components/auth/AuthDetails";
-import Admin from "./components/Admin";
+import Admin from "./components/Bord/Admin";
 import Home from "./components/Bord/Home";
 
 
