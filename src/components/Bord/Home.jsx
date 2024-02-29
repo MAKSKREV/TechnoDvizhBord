@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Homecss.css';
-import './script.js';
+
+
 const App = () => {
     const [data, setData] = useState({
         score_team_1: 0,
@@ -15,6 +16,8 @@ const App = () => {
         team_2_score_street_3: 4,
         team_score_street_main: 2,
     });
+    const [timeLeft, setTimeLeft] = useState(120);
+    const [timerInterval, setTimerInterval] = useState(null);
     const StreetContainer = ({ label, score }) => (
         <div className="houses_container">
             <div className={score === 4 ? 'triangle_green' : 'triangle'}></div>
@@ -58,6 +61,44 @@ const App = () => {
             clearInterval(intervalId); // очищаем интервал при размонтировании компонента
         };
     }, []);
+    const updateTimer = () => {
+        const timerElement = document.getElementById("timer");
+    
+        if (!timerElement) {
+          console.error("Элемент с id 'timer' не найден.");
+          return;
+        }
+    
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+    
+        const formattedMinutes = ("0" + minutes).slice(-2);
+        const formattedSeconds = ("0" + seconds).slice(-2);
+    
+        timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
+    
+        setTimeLeft(prevTimeLeft => prevTimeLeft - 1);
+    
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          timerElement.textContent = "Время вышло!";
+        }
+      };
+    
+      useEffect(() => {
+        fetchData();
+        const intervalId = setInterval(fetchData, 5000); // обновляем данные каждые 5 секунд
+    
+        return () => {
+          clearInterval(intervalId); // очищаем интервал при размонтировании компонента
+        };
+      }, []);
+    
+      useEffect(() => {
+        const timerInterval = setInterval(updateTimer, 1000);
+    
+        return () => clearInterval(timerInterval); 
+      }, [timeLeft]);
     return (
 
         <div className="app">
