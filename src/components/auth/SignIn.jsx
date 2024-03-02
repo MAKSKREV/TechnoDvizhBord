@@ -44,7 +44,7 @@ const SignIn = () => {
       <div className="blue"></div>
       
       <form >
-
+      <p className="reg"><a href="/signup">Зарегистрироваться</a></p>
         <h2 className="vhod">вход</h2>
         <input className="input1"
           placeholder="Почта"

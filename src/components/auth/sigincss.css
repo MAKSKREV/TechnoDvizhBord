@@ -24,7 +24,7 @@
   }
   .input1{
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 50%;
     left: 25%;
     height:5%;
@@ -50,6 +50,7 @@
     background-color: red;
     border-radius: 40px;
     border: none;
+    cursor: pointer;
 }
 .blue2{
     position: absolute;
@@ -57,4 +58,53 @@
     width: 100%;
     height:20%;
     background-color: #044AF0;
+}
+.reg{
+  position: absolute;
+  color: #044AF0;
+  top: 55%;
+  left: 50%;
+  text-decoration: none;
+}
+  .reg a:link {
+    color: #044AF0; 
+    text-decoration: none; 
+  }
+  
+  .reg a:visited {
+    color: #044AF0; 
+  }
+  
+  .reg a:hover {
+    color: red; 
+  }
+.input0{
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height:5%;
+  border-radius: 40px;
+  border-color: #0051FF;
+}
+.regg{
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  font-size: 60px;
+  color: #0051FF;
+  font-family: Proxima Nova;
+}
+.knopka1{
+  position: absolute;
+  top: 60%;
+  color: white;
+  font-size: 18px;
+  width: 12%;
+  left: 45%;
+  height: 5%;
+  background-color: red;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
 }
