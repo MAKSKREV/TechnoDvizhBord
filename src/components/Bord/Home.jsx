@@ -54,6 +54,8 @@ const App = () => {
     };
 
     useEffect(() => {
+
+
         fetchData();
         const intervalId = setInterval(fetchData, 50); // обновляем данные каждые 5 секунд
 
@@ -63,42 +65,52 @@ const App = () => {
     }, []);
     const updateTimer = () => {
         const timerElement = document.getElementById("timer");
-    
+
         if (!timerElement) {
-          console.error("Элемент с id 'timer' не найден.");
-          return;
+            console.error("Элемент с id 'timer' не найден.");
+            return;
         }
-    
+
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
-    
+
         const formattedMinutes = ("0" + minutes).slice(-2);
         const formattedSeconds = ("0" + seconds).slice(-2);
-    
+
         timerElement.textContent = formattedMinutes + ":" + formattedSeconds;
-    
+
         setTimeLeft(prevTimeLeft => prevTimeLeft - 1);
-    
+
         if (timeLeft < 0) {
-          clearInterval(timerInterval);
-          timerElement.textContent = "Время вышло!";
+            clearInterval(timerInterval);
+            timerElement.textContent = "Время вышло!";
         }
-      };
-    
-      useEffect(() => {
+    };
+
+    useEffect(() => {
         fetchData();
         const intervalId = setInterval(fetchData, 5000); // обновляем данные каждые 5 секунд
-    
+        const metaTag = document.querySelector('meta[name="viewport"]');
+        if (metaTag) {
+            metaTag.content = 'width=device-width, initial-scale=1.0';
+        } else {
+            // Если мета-тега нет, создаем его
+            const newMetaTag = document.createElement('meta');
+            newMetaTag.name = 'viewport';
+            newMetaTag.content = 'width=device-width, initial-scale=1.0';
+            document.head.appendChild(newMetaTag);
+        }
+
         return () => {
-          clearInterval(intervalId); // очищаем интервал при размонтировании компонента
+            clearInterval(intervalId); // очищаем интервал при размонтировании компонента
         };
-      }, []);
-    
-      useEffect(() => {
+    }, []);
+
+    useEffect(() => {
         const timerInterval = setInterval(updateTimer, 1000);
-    
-        return () => clearInterval(timerInterval); 
-      }, [timeLeft]);
+
+        return () => clearInterval(timerInterval);
+    }, [timeLeft]);
     return (
 
         <div className="app">
@@ -144,33 +156,40 @@ const App = () => {
                     <h1 id="timer" style={{ fontWeight: 'bold', fontSize: 'larger', zIndex: '11', position: 'absolute', left: '50%', transform: 'translate(-50%)' }}>02:00</h1>
                 </div>
             </div>
-            <div className="streets_container" style={{ position: 'absolute', top: '45%', left: '14%' }}>
-                <StreetContainer score={data.team_1_score_street_1}/>
-                <div className='street_label'>Улица Медиа</div>
+            < div className="street-container-1" >
+                <StreetContainer score={data.team_1_score_street_1} />
+                <div className='street-label'>Улица Медиа</div>
             </div>
-            <div className="streets_container" style={{ position: 'absolute', top: '45%', left: '23.5%' }}>
-                <StreetContainer score={data.team_1_score_street_2}/>
-                <div className='street_label'>Улица Первых</div>
+
+            <div className="street-container-2">
+                <StreetContainer score={data.team_1_score_street_2} />
+                <div className='street-label'>Улица Первых</div>
             </div>
-            <div className="streets_container" style={{ position: 'absolute', top: '45%', left: '34%' }}>
-                <StreetContainer score={data.team_1_score_street_3}/>
-                <div className='street_label'>Улица Истории</div>
+
+            <div className="street-container-3">
+                <StreetContainer score={data.team_1_score_street_3} />
+                <div className='street-label'>Улица Истории</div>
             </div>
-            <div className='streets_container' style={{position:'absolute', top:'45%', left:'61%'}}>
-                <StreetContainer score={data.team_2_score_street_1}/>
-                <div className='street_label'>Улица Медиа</div>
+
+            <div className='street-container-4' >
+                <StreetContainer score={data.team_2_score_street_1} />
+                <div className='street-label'>Улица Медиа</div>
             </div>
-            <div className='streets_container' style={{position:'absolute', top:'45%', left:'71%'}}>
-                <StreetContainer score={data.team_2_score_street_2}/>
-                <div className='street_label'>Улица Первых</div>
+
+            <div className='street-container-5' >
+                <StreetContainer score={data.team_2_score_street_2} />
+                <div className='street-label'>Улица Первых</div>
             </div>
-            <div className='streets_container' style={{position:'absolute', top:'45%', left:'81%'}}>
-                <StreetContainer score={data.team_2_score_street_3}/>
-                <div className='street_label'>Улица Истории</div>
+
+            <div className='street-container-6' >
+                <StreetContainer score={data.team_2_score_street_3} />
+                <div className='street-label'>Улица Истории</div>
             </div>
-            <div className="streets_container" style={{ position: 'absolute', top: '43%', left: '50%', transform: 'translate(-50%)' }}>
+
+            <div className="skyscraper-container" >
                 <Skyscraper score={data.team_score_street_main} />
             </div>
+
         </div>
     );
 }

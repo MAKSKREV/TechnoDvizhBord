@@ -213,7 +213,7 @@
 
 }
 
-.streets_container {
+.streets_container.skyscraper { 
     position: absolute;
     left: 0%;
 }
@@ -321,7 +321,7 @@
     top: 47.2%;
     left: 50%; */
     /* transform: translate(-50%); */
-    width: 0;
+    width: 10;
     border-radius: 7px;
     height: 0;
     border-left: 30px solid transparent;
@@ -725,7 +725,151 @@
         top: 30px;
     }
 }
-
+.street-container-1{
+    position: absolute;
+     top: 45%;
+     left: 14%;
+  }
+.street-container-2{
+    position: absolute;
+     top: 45%;
+     left: 24%;
+}
+.street-container-3{
+    position: absolute;
+     top: 45%;
+     left: 34%;
+}
+.street-container-4{
+    position: absolute;
+     top: 45%;
+     left: 44%;
+}
+.street-container-5{
+    position: absolute;
+     top: 45%;
+     left: 54%;
+}
+.street-container-6{
+    position: absolute;
+     top: 45%;
+     left: 64%;
+}
 .ulmedia {
     position: absolute;
+}
+@media only screen and (max-width: 480px) {
+    body{
+        background-color: black;
+    }
+    .blue_upper_background{
+        width: 100%;
+        height: 10%;
+        top: 0%;
+    }
+    .blue_upper_background_with_curve{
+        width: 100%;
+    }
+    .main_background{
+        width: 90%;
+        left: 50%;
+        height: 50%;
+        top: 60%;
+    }
+    .circles{
+        width: 80%;
+        height: 80%;
+
+    }
+    .area{
+        width: 115%;
+        height: 215%;
+    }
+    .house_white {
+        width: 20px;
+        height: 20px;
+    }
+    .house_green{
+        width: 20px;
+        height: 20px;
+
+    }
+    .triangle{
+        width: 0px;
+    }
+      .street-container-1{
+        position: absolute;
+        left: 10%;
+      }
+      .street-container-2{
+        position: absolute;
+         top: 45%;
+         left: 24%;
+    }
+    .street-container-3{
+        position: absolute;
+         top: 45%;
+         left: 34%;
+    }
+    .street-container-4{
+        position: absolute;
+         top: 45%;
+         left: 44%;
+    }
+    .street-container-5{
+        position: absolute;
+         top: 45%;
+         left: 54%;
+    }
+    .street-container-6{
+        position: absolute;
+         top: 45%;
+         left: 64%;
+    }
+    .triangle_green {
+
+        width: 0;
+        height: 0;
+        border-radius: 2px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid #12B72D;
+    
+    }
+    .triangle {
+
+        width: 0;
+        height: 0;
+        border-radius: 2px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid white;
+    
+    }
+    .title_left{
+        font-size: 0px;
+    }
+    .title_center{
+        font-size: 0px;
+    }
+    .title_right{
+        font-size: 0px;
+    }
+    .separator{
+        width: 0%;
+    }
+    .backroudn_for_titles{
+        width: 0%;
+    }
+    .item_for_widing{
+        width: 0%;
+    }
+    .score_background{
+        width: 30%;
+        height: 5%;  
+    }
+    .score{
+        font-size: 30px;
+        top: 24.3%;
+    }
 }

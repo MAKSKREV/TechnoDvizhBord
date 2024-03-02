@@ -2,6 +2,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { auth } from "../../firebase";
+import './sigincss.css';
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const SignIn = () => {
         if (email === "admin@gmail.com" && password === "admin11") {
           navigate("/admin");
         } else {
-          navigate("/Bord/Home.html");
+          navigate("/home");
         }
 
       }) 
@@ -38,24 +39,29 @@ const SignIn = () => {
   }
 
   return (
+  
     <div>
-      <form>
-        <h2>Log in</h2>
-        <input
-          placeholder="Please enter your email"
+      <div className="blue"></div>
+      
+      <form >
+
+        <h2 className="vhod">вход</h2>
+        <input className="input1"
+          placeholder="Почта"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
         />
-        <input
-          placeholder="Please enter your password"
+        <input className="input2"
+          placeholder="Пароль"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           type="password"
         />
-        <button onClick={logIn}>Login</button>
+        <button className="knopka" onClick={logIn}>Войти в аккаунт</button>
         {error ? <p style={{ color: "red" }}>{error}</p> : ""}
       </form>
+      <div className="blue2"></div>
     </div>
   );
 };
