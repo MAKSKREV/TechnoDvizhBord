@@ -136,8 +136,9 @@ const App = () => {
             <div className="separator" style={{ position: 'absolute', top: '.5%', left: '63.5%' }}></div>
             <div className="title_right" style={{ position: 'absolute', top: '1.6%', left: '74%' }}>Квалификационный матч 1</div>
             <div className="logo_left"></div>
+            <p className='VS'>VS</p>
             <div className="logo_right"></div>
-
+            <img className='logoo' src='https://cdn.discordapp.com/attachments/896756748331929643/1213832655745851402/image.png?ex=65f6e8c1&is=65e473c1&hm=dcd57befb7d56da709bc56b51f0eb834c74fdc0aa3f5c7374f7780571ab74792&'></img>
             <div className="blue_upper_background_with_curve"></div>
             <div className="score_background"></div>
             <div className="blue_upper_background"></div>
