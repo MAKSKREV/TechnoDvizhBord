@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/TechnoDvizhBord/static/css/main.698b0928.css",
+    "main.js": "/TechnoDvizhBord/static/js/main.bc3f98b7.js",
+    "static/js/453.d616059b.chunk.js": "/TechnoDvizhBord/static/js/453.d616059b.chunk.js",
+    "static/media/imggg.png": "/TechnoDvizhBord/static/media/imggg.3550e522dfb604adbf6a.png",
+    "index.html": "/TechnoDvizhBord/index.html",
+    "main.698b0928.css.map": "/TechnoDvizhBord/static/css/main.698b0928.css.map",
+    "main.bc3f98b7.js.map": "/TechnoDvizhBord/static/js/main.bc3f98b7.js.map",
+    "453.d616059b.chunk.js.map": "/TechnoDvizhBord/static/js/453.d616059b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.698b0928.css",
+    "static/js/main.bc3f98b7.js"
+  ]
+}
