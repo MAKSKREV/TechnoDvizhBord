@@ -138,15 +138,15 @@ const App = () => {
             <div className="logo_left"></div>
             <p className='VS'>VS</p>
             <div className="logo_right"></div>
-            <img className='logoo' src='https://cdn.discordapp.com/attachments/896756748331929643/1213832655745851402/image.png?ex=65f6e8c1&is=65e473c1&hm=dcd57befb7d56da709bc56b51f0eb834c74fdc0aa3f5c7374f7780571ab74792&'></img>
+    
             <div className="blue_upper_background_with_curve"></div>
             <div className="score_background"></div>
             <div className="blue_upper_background"></div>
             <div className="score">{`${data.score_team_1}:${data.score_team_2}`}</div>
-            <div className="table_row">
-                <div className="item_for_widing w-300">{data.name_team_1}</div>
-                <div className="item_for_widing w-300">{data.name_team_2}</div>
-            </div>
+      
+            <div className="item_for_widing0">{data.name_team_1}</div>
+            <div className="item_for_widing1">{data.name_team_2}</div>
+
             <div className="item">
                 <div className="timer_background">
                     <div className="loader">

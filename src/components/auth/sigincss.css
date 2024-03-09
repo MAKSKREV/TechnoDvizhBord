@@ -164,3 +164,156 @@
   top: -15%;
 
 }
+@media (min-width: 840px) and (max-width: 1200px) {
+  .regg{
+    font-size: 40px;
+  }
+  .zakon{
+    font-size: 10px;
+  }
+  .reg{
+    font-size: 14px;
+    top: 58%;
+    left: 49%;
+  }
+  .knopka1{
+    width: 20%;
+    left: 42%;
+  }
+  .inactiveButton{
+    width: 20%;
+    left: 42%;
+  }
+}
+@media (min-width: 619px) and (max-width: 842px) {
+  .zakon{
+    font-size: 10px;
+    width: 50%;
+    left: 31%;
+  }
+  .regg{
+    font-size: 40px;
+    left: 32%;
+  }
+  .galka{
+    left: 25%;
+  }
+  .reg{
+    font-size: 14px;
+    top: 58%;
+    left: 49%;
+  }
+  .knopka1{
+    width: 25%;
+    left: 39%;
+  }
+  .inactiveButton{
+    width: 25%;
+    left: 39%;
+  }
+
+}
+@media (min-width: 440px) and (max-width: 618px) {
+  .regg{
+    font-size: 35px;
+    left:30% ;
+    top: 12%;
+  }
+  .zakon{
+    font-size: 9px;
+    width: 65%;
+    left: 25%;
+
+  }
+  .vhod{
+    font-size: 80px;
+    left: 35%;
+  }
+  .reg0{
+    font-size: 14px;
+    left: 40%;
+  }
+  .knopka{
+    width: 30%;
+    left: 36%;
+  }
+  .galka{
+    left: 20%;
+  }
+  .reg{
+    font-size: 14px;
+    top: 58%;
+    left: 49%;
+  }
+  .knopka1{
+    width: 35%;
+    left: 35%;
+  }
+  .inactiveButton{
+    width: 35%;
+    left: 35%;
+  }
+}
+@media (min-width: 100px) and (max-width: 439px) {
+  .reg{
+    font-size: 13px;
+    top: 58%;
+  }
+  .input0{
+    width: 60%;
+    left: 20%;
+  }
+  .input1{
+    width: 60%;
+    left: 20%;
+  }
+  .input2{
+    width: 60%;
+    left: 20%;
+  }
+  .knopka1{
+    width: 45%;
+    left: 30%;
+    font-size: 13px;
+    height: 4%;
+  }
+  .inactiveButton{
+    width: 45%;
+    left: 30%;
+    font-size: 13px;
+    height: 4%;
+  }
+  .galka{
+    left: 10%;
+  }
+  .zakon{
+    font-size: 8.5px;
+    width: 75%;
+    left: 20%;
+
+  }
+  .regg{
+    font-size: 25px;
+    left:20% ;
+    top: 12%;
+  }
+  .logo{
+    width: 75%;
+    top: 10%;
+  }
+  .vhod{
+    font-size: 60px;
+    top: 15%;
+    left: 35%;
+  }
+  .reg0{
+    font-size: 13px;
+    left: 35%;
+  }
+  .knopka{
+    width: 50%;
+    left: 25%;
+  }
+
+
+}

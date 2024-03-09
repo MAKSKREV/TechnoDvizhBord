@@ -774,10 +774,41 @@
 .logoo{
  width: 0%;       
 }
-@media only screen and (max-width: 1500px) {
-    body{
-        background-color: black;
-    }
+.item_for_widing0{
+    color: #fff;
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    width: 530px;
+
+    font-family: Proxima Nova Condensed;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    white-space: normal;
+    text-align: center;
+
+
+}
+.item_for_widing1{
+    color: #fff;
+    position: absolute;
+    top: 18%;
+    left: 65%;
+    width: 530px;
+
+    font-family: Proxima Nova Condensed;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    white-space: normal;
+    text-align: center;
+
+
+}
+@media (max-width: 1500px) {
     .blue_upper_background{
         width: 120%;
         height: 10%;
@@ -962,5 +993,20 @@
         left: 64.5%;
         top: 38%;
         z-index: 999;
+    }
+    .item_for_widing0{
+        top: 45%;
+        font-size: 20px;
+        left: -45%;
+    }
+    .item_for_widing1{
+        top: 45%;
+        font-size: 20px;
+        left: 30%;
+    }
+}
+@media (min-width: 100px) and (max-width: 430x) {
+    .area{
+        height: 0%;
     }
 }
