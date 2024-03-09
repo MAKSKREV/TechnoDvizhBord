@@ -512,10 +512,10 @@
 }
 .VS{
     position: absolute;
-    font-size: 120px;
+    font-size: 90px;
     color: #FFF;
-    left: 46.3%;
-    top: -2%;
+    left: 47.5%;
+    top: 4%;
     z-index: 999;
 }
 
@@ -808,7 +808,7 @@
 
 
 }
-@media (max-width: 1500px) {
+@media  (max-width: 1500px) {
     .blue_upper_background{
         width: 120%;
         height: 10%;
@@ -1005,8 +1005,29 @@
         left: 30%;
     }
 }
-@media (min-width: 100px) and (max-width: 430x) {
-    .area{
-        height: 0%;
+@media (min-width: 440px) and (max-width: 1500px) {
+    .item_for_widing0 {
+        top: 45%;
+        font-size: 30px;
+        left: 30%;
+        width: 10%;
+    }
+
+    .item_for_widing1 {
+        top: 45%;
+        font-size: 30px;
+        left: 90%; 
+        width: 10%;
     }
 }
+@media (min-width: 100px) and (max-width: 441px) {
+    .area {
+        height: 200%;
+        width: 200%;
+    }
+
+    .score {
+        font-size: 45px;
+    }
+}
+
