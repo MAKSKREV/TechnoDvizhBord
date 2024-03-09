@@ -88,24 +88,31 @@ const App = () => {
     };
 
     useEffect(() => {
+        // Fetch initial data
         fetchData();
-        const intervalId = setInterval(fetchData, 5000); // обновляем данные каждые 5 секунд
+    
+        // Set up a 5-second interval to fetch data
+        const intervalId = setInterval(fetchData, 5000);
+    
+        // Update or create the viewport meta tag
         const metaTag = document.querySelector('meta[name="viewport"]');
         if (metaTag) {
+            // Update existing meta tag
             metaTag.content = 'width=device-width, initial-scale=1.0';
         } else {
-            // Если мета-тега нет, создаем его
+            // Create a new meta tag if it doesn't exist
             const newMetaTag = document.createElement('meta');
             newMetaTag.name = 'viewport';
             newMetaTag.content = 'width=device-width, initial-scale=1.0';
             document.head.appendChild(newMetaTag);
         }
-
+    
+        // Cleanup: clear the interval on component unmount
         return () => {
-            clearInterval(intervalId); // очищаем интервал при размонтировании компонента
+            clearInterval(intervalId);
         };
-    }, []);
-
+    }, []); // Empty dependency array means this effect runs once on mount
+    
     useEffect(() => {
         const timerInterval = setInterval(updateTimer, 1000);
 
